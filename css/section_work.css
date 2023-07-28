@@ -1,0 +1,333 @@
+:root {
+    --orange_light: #ff9900;
+    --orange: #e1670e;
+    --white:#ffffff;
+    --dark_grey: #666666;
+    --black: #333333;
+}
+
+.work__heading {
+    font-size: 48px;
+    line-height: 59px;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 48px;
+}
+
+.work__steps {
+    margin-bottom: 45px;
+    display: flex;
+}
+
+
+.work__step:not(:last-child) {
+    margin-right: 85px;
+}
+
+.work__step-btn {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: var(--black);
+    border: none;
+    background-color: transparent;
+    transition-property: color, outline;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.work__step-btn:focus {
+    outline: 2px solid var(--orange_light);
+    outline-offset: 5px;
+    
+}
+.work__step-btn.active {
+    color: var(--orange_light);
+    outline: none;
+}
+
+
+.work__step-btn:hover {
+    color: var(--orange_light);
+    outline: none;
+}
+
+
+
+.work__step-btn:active {
+    color: var(--orange);
+    outline: none;
+}
+
+.work__btn-active {
+    color: var(--orange);
+    outline: none;
+}
+
+
+.work__consultation {
+    display: none;
+    line-height: 2em; /**/
+    justify-content: space-between;
+}
+
+.work__consultation.work__consultation-active {
+    display: flex; /*стояло block*/
+}
+
+.work__consultation::after {
+    margin-top: 10px;
+    content: '';
+    width: 49% ;/**/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.work__consultation-one::after  {
+    background-image: url('../img/3.jpg');
+}
+
+.work__consultation-two::after {
+    background-image: url('../img/tab2.jpg');
+}
+
+.work__consultation-three::after {
+    background-image: url('../img/tab3.jpg');
+}
+
+.work__consultation-four::after {
+    background-image: url('../img/tab4.jpg');
+}
+
+.work__consultation-description {
+    margin-right: 30px; /**/
+    width: 45%; /**/
+}
+
+.work__consultation-heading {
+    margin-bottom: 8px;
+    margin-top: 0px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--black);
+}
+
+.work__consultation-text {
+    max-width: 758px; /**/
+    margin: 4px 2px 50px 0px;/**/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.work__link1 {
+    margin-right: 29px;
+    width: 175px;
+    height: 60px;
+    display: inline-block;
+    padding: 19px 20px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid var(--orange_light);
+    background-color: var(--orange_light);
+    color: var(--white);
+    cursor: pointer;
+    transition-property: bacground-color, outline;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.work__link1:hover,
+.work__link1:focus {
+    background-color: #F7B045;
+    outline: none;
+}
+
+.work__link1:active {
+    background-color: var(--orange);
+}
+
+.work__link2 {
+    width: 147px;
+    height: 60px;
+    display: inline-block;
+    padding: 19px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    border: 1px solid var(--black);
+    background-color: transparent;
+    color: var(--black);
+    cursor: pointer; 
+    transition-property: bacground-color, outline;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.work__link2:hover,
+.work__link2:focus {
+    background-color: var(--dark_grey);
+    color: var(--white);
+    outline: none;
+}
+
+.work__link2:active {
+    background-color: #000000;
+    outline: none;
+}
+
+@media(max-width: 1200px){
+    .work {
+        margin-bottom: 85px;
+    }
+
+    .work__heading {
+        margin-bottom: 55px;
+    }
+
+    .work__steps {
+        margin-bottom: 55px;
+    }
+
+    .work__consultation-text {
+        max-width: 758px; /**/
+        margin: 4px 2px 25px 0px;/**/
+    }
+}
+@media(max-width: 1000px){
+
+    .work__consultation {
+        /*display: flex;*/
+        /*margin-bottom: 14px; /**/
+        /*padding-bottom: 94px;/**/
+        line-height: 2em; /**/
+        justify-content: space-between;
+    }
+    
+    .work__consultation-active {
+        flex-direction: column;
+    }
+    
+    .work__consultation::after {
+        display: none;
+    }
+    
+    .work__consultation-one::after  {
+        display: none;
+    }
+
+    .work__consultation-two::after  {
+        display: none;
+    }
+    .work__consultation-three::after  {
+        display: none;
+    }
+
+    .work__consultation-four::after  {
+        display: none;
+    }
+
+
+
+    .work__consultation::before {
+        margin-bottom: 38px;
+        content: '';
+        /*width: 100% ;/**/
+        height: 284px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .work__consultation-one::before {
+        background-image: url('../img/3.jpg');
+    }
+
+    .work__consultation-two::before {
+        background-image: url('../img/tab2.jpg');
+    }
+    
+    .work__consultation-three::before {
+        background-image: url('../img/tab3.jpg');
+    }
+    
+    .work__consultation-four::before {
+        background-image: url('../img/tab4.jpg');
+    }
+
+    .work__consultation-description {
+        width: 100%; /**/
+    }
+
+    .work__steps {
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    .work__step:not(:last-child) {
+        margin-right: 0px;
+    }
+}
+
+@media(max-width: 480px){
+    .work {
+        margin-bottom: 60px;
+    }
+    .work__heading {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 400;
+        color: var(--black);
+        margin-bottom: 16px;
+    }
+    
+    .work__steps {
+        margin-bottom: 16px;
+        margin-right: 40px;
+        display: flex;
+    }
+
+    .work__step {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .work__consultation::before {
+        margin-bottom: 16px;
+        height: 160px;
+    }
+
+    .work__consultation-heading {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    
+    .work__consultation-text {
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+    
+    .work__link1 {
+        width: 162px;
+        height: 40px;
+        padding: 11px 15px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .work__link2 {
+        width: 118px;
+        height: 40px;
+        padding: 11px 29px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+}
